@@ -22,7 +22,9 @@ for(var nfl of nfc){
 file.end();
 console.log("done");
 
+setTimeout(() => {
 
-let fwd = fs.readFileSync(filein.replace(".srt", "")+'.txt').toString();
-fwd = fwd.replace(/\\n\r?\n/g, "\n");
-fs.writeFileSync(filein.replace(".srt", "")+'.txt', fwd)
+    let fwd = fs.readFileSync(filein.replace(".srt", "")+'.txt').toString();
+    fwd = fwd.replace(/\\n\r?\n/g, "\n");
+    fs.writeFileSync(filein.replace(".srt", "")+'.txt', fwd)
+}, 2000)
